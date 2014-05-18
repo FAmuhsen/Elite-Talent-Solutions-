@@ -1,0 +1,267 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 12, 2014, 10:57:06 AM
+    Author     : bilal
+*/
+
+
+.custom-animation {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.services {
+    width: 750px;
+    margin: 0 auto;
+}
+.textbox-animated{
+    width:150px;
+    text-align:center;
+    position:relative;
+
+}
+.custom-animation {
+    position: relative;
+    top: 0px;
+    left: 0px;  
+    float: left;
+    height:150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    clear:right;
+    overflow:hidden;
+    border-radius:50px !important;
+}
+.custom-animation img{
+    width: 100%; 
+    height: 100%; 
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display:block;
+}
+.custom-animation img.bottom{
+    postion: absolute;
+    top: -188px;
+    left: 0px;
+    opacity : 0;
+    display:block;
+}
+.custom-animation img{transform: scaleY(1);
+                      -webkit-transform: scale(1) rotate(0deg);
+                      transition: all 0.5s ease-in-out;
+                      -webkit-transition: all 0.7s ease-in-out;
+}
+.custom-animation:hover img.top{
+    transform: scale(10);
+    -webkit-transform: scale(10) rotate(45deg);
+    opacity: 0;
+}
+.custom-animation:hover img.bottom{
+    opacity: 1;
+
+}
+/*
+#secondary{
+    width:23%;
+    min-width:150px;
+    padding-top:1px;
+}
+.vacancies{
+    width:68%;
+    padding-left:80px;
+}
+h2,h4,a,h1,h3,h5,body,p {
+    font-family:"jubilat-n2","jubilat",serif;
+    color:#676767;
+}
+.menubar{
+    display:inline-block;
+    clear: both;
+}
+#header-right-section {
+    padding-right : 180px;
+
+}
+.menu-toggle {
+    min-width:100px;
+}
+.main-small-navigation {
+    min-width:150;
+    display:inline-block;
+}
+/*.header-post-title-class.archive-header {
+    padding-left: 45%;
+}
+.header-post-title-class.vacancies-header {
+    padding-left: 33%;
+}
+.header-post-title-class.talent-header{
+    padding-left: 41%;
+}
+.header-post-title-class.whyets-header {
+    padding-left:23%;
+}
+.header-post-title-class.candidates-header {
+    padding-left: 45%;
+}
+.header-post-title-class.clients-header {
+    padding-left: 45%;
+}
+.header-post-title-class.contact-header {
+    padding-left:55%;
+}
+.header-post-title-class{
+    min-width:170px;
+}*/
+
+.animated-img{
+    overflow: hidden;
+}
+.animated-img li {
+    float: left;
+    display: inline-block;
+    list-style-type:none;
+    padding: 40px;
+    margin: 0 0 3px 0;
+}
+.animated-img tr,p {
+    text-align:center;
+}
+.animated-img ul {
+    width:100%;
+}
+/*
+.contact-us tr td {
+    vertical-align:top;
+    border:none;
+    padding-bottom:0px;
+    padding-top:5px;
+    height:100%;
+}
+.contact-us {
+    align:center;
+    width:69%;
+    border-collapse:collapse;
+}
+.contact-us table {
+    border-spacing:5px 5px;
+    min-width:20%;
+}
+.contact-us input {
+    margin-bottom:16px;
+}
+.contact-us input[type="text"],input[type="email"],  textarea {
+    background:#E9E9E9;
+}
+.contact-form {
+    margin:0 auto;
+}
+.contact-form p{
+    text-align:left
+}
+.contact-form table{
+    margin:0 auto;
+    min-width:20%;
+}
+.candidates-sidebar {
+    float:left;
+}
+.candidates-sidebar li {
+    padding-top:10px;
+    border-style:solid;
+    border-bottom:thin solid #666;
+}
+.candidates-sidebar ul {
+    list-style-type:circle;
+}
+.whyets{
+    margin-left:50px;
+}
+.service-img img{
+    max-width: 61%;
+}
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    background: none repeat scroll 0% 0% #E9E9E9;
+}
+.archive table{
+    max-width:900px;
+    margin:0 auto;
+}
+.archive table,th,td{
+    border:1px solid #444;
+}
+
+.tg-one-fourth.tg-column-2{
+    text-transform:uppercase;
+}
+.archive tr:nth-child(odd){ background-color:#e5e5e5; }
+.archive tr:nth-child(even) { background-color:#ffffff; }
+.archive th{
+    font-weight:bold;
+}
+.archive a:hover{
+    color:#DB772B;
+}
+.archive table{
+    font-size:80%;
+}
+
+.talent-page input[type="text"], input[type="email"], input[type="password"], textarea,label,input {
+    clear:both;
+    float:left;
+    min-width:70%;
+}
+.bx-wrapper .bx-viewport {
+    background: none repeat scroll 0% 0% #333333;
+    height:225px !important;
+    box-shadow:none !important;
+    border:none !important;
+}
+.bx-next{
+    display:none !important;
+}
+.bx-prev{
+    display:none !important;
+}
+
+
+.wpcf7 .wpcf7-not-valid {
+  border: 1px solid #ff0000 !important;
+}
+.wpcf7 .wpcf7-not-valid-label {
+  color: #ff0000;
+}
+.wpcf7 .wpcf7-not-valid-tip {
+  display: none;
+  visibility: hidden;
+}
+.wpcf7 .wpcf7-form-control-wrap{
+    display: block !important;
+}*/
+
+
+
+#controllers a{
+    background-color: #274da0;
+    color: #274da0;
+}
+
+.slider-read-more-button{
+    display: none;
+}
+
+.footer-widgets-area .wpcf7 p{
+    margin-bottom: -20px !important;
+}
+.bx-wrapper{
+    min-height: 200px;
+}
