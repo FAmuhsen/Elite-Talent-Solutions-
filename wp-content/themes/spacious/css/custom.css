@@ -69,59 +69,6 @@ and open the template in the editor.
     opacity: 1;
 
 }
-/*
-#secondary{
-    width:23%;
-    min-width:150px;
-    padding-top:1px;
-}
-.vacancies{
-    width:68%;
-    padding-left:80px;
-}
-h2,h4,a,h1,h3,h5,body,p {
-    font-family:"jubilat-n2","jubilat",serif;
-    color:#676767;
-}
-.menubar{
-    display:inline-block;
-    clear: both;
-}
-#header-right-section {
-    padding-right : 180px;
-
-}
-.menu-toggle {
-    min-width:100px;
-}
-.main-small-navigation {
-    min-width:150;
-    display:inline-block;
-}
-/*.header-post-title-class.archive-header {
-    padding-left: 45%;
-}
-.header-post-title-class.vacancies-header {
-    padding-left: 33%;
-}
-.header-post-title-class.talent-header{
-    padding-left: 41%;
-}
-.header-post-title-class.whyets-header {
-    padding-left:23%;
-}
-.header-post-title-class.candidates-header {
-    padding-left: 45%;
-}
-.header-post-title-class.clients-header {
-    padding-left: 45%;
-}
-.header-post-title-class.contact-header {
-    padding-left:55%;
-}
-.header-post-title-class{
-    min-width:170px;
-}*/
 
 .animated-img{
     overflow: hidden;
@@ -133,122 +80,12 @@ h2,h4,a,h1,h3,h5,body,p {
     padding: 40px;
     margin: 0 0 3px 0;
 }
-.animated-img tr,p {
+.animated-img tr {
     text-align:center;
 }
 .animated-img ul {
     width:100%;
 }
-/*
-.contact-us tr td {
-    vertical-align:top;
-    border:none;
-    padding-bottom:0px;
-    padding-top:5px;
-    height:100%;
-}
-.contact-us {
-    align:center;
-    width:69%;
-    border-collapse:collapse;
-}
-.contact-us table {
-    border-spacing:5px 5px;
-    min-width:20%;
-}
-.contact-us input {
-    margin-bottom:16px;
-}
-.contact-us input[type="text"],input[type="email"],  textarea {
-    background:#E9E9E9;
-}
-.contact-form {
-    margin:0 auto;
-}
-.contact-form p{
-    text-align:left
-}
-.contact-form table{
-    margin:0 auto;
-    min-width:20%;
-}
-.candidates-sidebar {
-    float:left;
-}
-.candidates-sidebar li {
-    padding-top:10px;
-    border-style:solid;
-    border-bottom:thin solid #666;
-}
-.candidates-sidebar ul {
-    list-style-type:circle;
-}
-.whyets{
-    margin-left:50px;
-}
-.service-img img{
-    max-width: 61%;
-}
-input[type="text"], input[type="email"], input[type="password"], textarea {
-    background: none repeat scroll 0% 0% #E9E9E9;
-}
-.archive table{
-    max-width:900px;
-    margin:0 auto;
-}
-.archive table,th,td{
-    border:1px solid #444;
-}
-
-.tg-one-fourth.tg-column-2{
-    text-transform:uppercase;
-}
-.archive tr:nth-child(odd){ background-color:#e5e5e5; }
-.archive tr:nth-child(even) { background-color:#ffffff; }
-.archive th{
-    font-weight:bold;
-}
-.archive a:hover{
-    color:#DB772B;
-}
-.archive table{
-    font-size:80%;
-}
-
-.talent-page input[type="text"], input[type="email"], input[type="password"], textarea,label,input {
-    clear:both;
-    float:left;
-    min-width:70%;
-}
-.bx-wrapper .bx-viewport {
-    background: none repeat scroll 0% 0% #333333;
-    height:225px !important;
-    box-shadow:none !important;
-    border:none !important;
-}
-.bx-next{
-    display:none !important;
-}
-.bx-prev{
-    display:none !important;
-}
-
-
-.wpcf7 .wpcf7-not-valid {
-  border: 1px solid #ff0000 !important;
-}
-.wpcf7 .wpcf7-not-valid-label {
-  color: #ff0000;
-}
-.wpcf7 .wpcf7-not-valid-tip {
-  display: none;
-  visibility: hidden;
-}
-.wpcf7 .wpcf7-form-control-wrap{
-    display: block !important;
-}*/
-
-
 
 #controllers a{
     background-color: #274da0;
@@ -264,4 +101,42 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 .bx-wrapper{
     min-height: 200px;
+}
+
+
+.updated, .by-author{
+    display: none;
+}
+
+.default-wp-page .previous a, .default-wp-page .next a{
+    color: #f6891f;
+}
+.default-wp-page .previous a:hover, .default-wp-page .next a:hover{
+    color: #FFF;
+    background-color:#f6891f;
+    border-color:#f6891f;
+}
+
+.single_job_listing .date-posted{
+    color: #274da0 !important;
+}
+.single_job_listing .meta{
+    border: none !important;
+}
+.job_filters{
+    background: none;
+}
+
+.job_listings > li:nth-child(even){
+    background-color: #f4f4f4;
+}
+.job_listings > li:nth-child(odd){
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #274da0;
+}
+
+.showing_jobs .rss_link{
+    display: none;
 }
