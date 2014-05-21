@@ -10,15 +10,15 @@ function get_job_listings( $args = array() ) {
 	global $wpdb;
 
 	$args = wp_parse_args( $args, array(
-		'search_location'    => '',
-		'search_keywords'    => '',
-		'search_categories'  => array(),
-		'job_types'          => array(),
-		'offset'             => '',
-		'posts_per_page'     => '-1',
-		'orderby'            => 'date',
-		'order'              => 'DESC',
-		'show_featured_only' => false
+		'search_location'   => '',
+		'search_keywords'   => '',
+		'search_categories' => array(),
+		'job_types'         => array(),
+		'offset'            => '',
+		'posts_per_page'    => '-1',
+		'orderby'           => 'date',
+		'order'             => 'DESC',
+		'featured'          => null
 	) );
 
 	$query_args = array(
@@ -59,10 +59,11 @@ function get_job_listings( $args = array() ) {
 		);
 	}
 
-	if ( $args['show_featured_only'] ) {
+	if ( ! is_null( $args['featured'] ) ) {
 		$query_args['meta_query'][] = array(
 			'key'     => '_featured',
-			'value'   => '1'
+			'value'   => '1',
+			'compare' => $args['featured'] ? '=' : '!='
 		);
 	}
 
@@ -84,10 +85,10 @@ function get_job_listings( $args = array() ) {
 		$postmeta_search_keywords_sql = array();
 
 		foreach ( $search_keywords as $keyword ) {
-			$postmeta_search_keywords_sql[] = " meta_value LIKE '%" . $wpdb->escape( $keyword ) . "%' ";
+			$postmeta_search_keywords_sql[] = " meta_value LIKE '%" . esc_sql( $keyword ) . "%' ";
 			$posts_search_keywords_sql[]    = " 
-				post_title LIKE '%" . $wpdb->escape( $keyword ) . "%' 
-				OR post_content LIKE '%" . $wpdb->escape( $keyword ) . "%' 
+				post_title LIKE '%" . esc_sql( $keyword ) . "%' 
+				OR post_content LIKE '%" . esc_sql( $keyword ) . "%' 
 			";
 		}
 
@@ -185,11 +186,12 @@ if ( ! function_exists( 'get_job_listing_types' ) ) :
  * @access public
  * @return array
  */
-function get_job_listing_types() {
+function get_job_listing_types( $fields = 'all' ) {
 	return get_terms( "job_listing_type", array(
-		'orderby'       => 'name',
-	    'order'         => 'ASC',
-	    'hide_empty'    => false,
+		'orderby'    => 'name',
+		'order'      => 'ASC',
+		'hide_empty' => false,
+		'fields'     => $fields
 	) );
 }
 endif;
